@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html ng-app="app">
+    <head>  
+        <meta charset="	utf-8">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+        <link href="styles.css" rel="stylesheet">
+        <title>Components</title>
+        
+    </head>
+    <body>
+
+        <div ng-controller="myCtrl">
+         
+        </div>
+        <p><b>Example 1</b></p>
+        <div ng-controller="MyController">
+            <button ng-click="change()">Change</button>
+            <my-directive name="fullname"></my-directive>
+        </div>
+
+        <hr>
+        <p><b>Example 2</b></p>
+        <div ng-controller="newCtrl as ct">
+            Name in controller: {{ct.nameCt}}
+
+            <new-directive name="ct.nameCt"></new-directive>
+            <hr>
+            <new-component name="ct.nameCt"></new-component>
+
+        </div>
+
+        <hr>
+        
+        <new-component name="newComp.nameCt"></new-component>
+        
+
+
+
+
+
+
+
+
+
+
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script> -->
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.1/angular.min.js"></script>
+        <script src="script.js"></script>
+    </body>
+</html>
